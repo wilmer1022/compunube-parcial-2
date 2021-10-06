@@ -1,0 +1,18 @@
+WILMER DAVID GUARIN - 2170777
+COMPUTACIÓN EN LA NUBE
+PARCIAL 2
+
+AKS - Azure Kubernetes Service
+
+4. Monitoreo y logs
+
+El Dashboard de Azure para AKS, ofrece en su tag de "Supervisión" una opción
+de nombre "Información", acá se podran ver algunas opciones como el consumo
+de CPU, memoria, nodos, etc. Este monitoree esta realizado en Prometheus y
+esta graficado con Grafana.
+
+Se utilizo JMeter para realizar pruebas sobre el aplciativo web multi-tier,
+con 1000 peticiones con un tiempo de subida de 1 segundo en 3 bucles,
+el monitoreo muestra que no hubo errores, pero que si, durante un breve
+periodo de tiempo, los nodos del clúster autoescalaron para arriba por la 
+demanda y luego hacia abajo cuando la prueba termino.

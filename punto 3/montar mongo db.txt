@@ -1,0 +1,15 @@
+WILMER DAVID GUARIN - 2170777
+COMPUTACIÓN EN LA NUBE
+PARCIAL 2
+
+AKS - Azure Kubernetes Service
+
+3. Aplicación propia
+
+cd ..
+mkdir mongo_db
+cd mongo_db
+kubectl apply -f mongo-secret.yaml
+kubectl apply -f mongo.yaml
+kubectl apply -f mongo-configmap.yaml 
+kubectl apply -f mongo-express.yaml

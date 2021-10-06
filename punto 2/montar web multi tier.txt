@@ -1,0 +1,20 @@
+WILMER DAVID GUARIN - 2170777
+COMPUTACIÓN EN LA NUBE
+PARCIAL 2
+
+AKS - Azure Kubernetes Service
+
+2. Correr un servicio web multi tier
+
+mkdir parcial2
+cd parcial2
+mkdir web_multi_tier
+cd web_multi_tier
+kubectl apply -f redis-leader-deployment.yaml
+kubectl apply -f redis-leader-service.yaml
+kubectl apply -f redis-follower-deployment.yaml
+kubectl apply -f redis-follower-service.yaml
+kubectl apply -f frontend-deployment.yaml
+kubectl apply -f frontend-service.yaml
+kubectl get pods -o wide
+kubectl get services -o wide

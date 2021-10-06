@@ -1,0 +1,30 @@
+WILMER DAVID GUARIN - 2170777
+COMPUTACIÓN EN LA NUBE
+PARCIAL 2
+
+AKS - Azure Kubernetes Service
+
+1. Crear un clúster de Kubernetes
+
+Desde Azure Cloud Shell > Bash
+
+Crear un grupo de recursos:
+
+az group create --name myparcial2 --location eastus
+
+Activar el monitoreo de clúster:
+
+az provider show -n Microsoft.OperationsManagement -o table
+az provider show -n Microsoft.OperationalInsights -o table
+az provider register --namespace Microsoft.OperationsManagement
+az provider register --namespace Microsoft.OperationalInsights
+
+Crear el clúster de AKS
+
+az aks create --resource-group myparcial2 --name myAKSParical2 --node-count 2 --enable-addons monitoring --generate-ssh-keys
+
+Conectar al clúster:
+
+az aks install-cli
+az aks get-credentials --resource-group myparcial2 --name myAKSParical2
+kubectl get nodes -o wide
